@@ -11,7 +11,7 @@ test("index page has a projects heading", () => {
 test("index page links to each project", () => {
   for (const url of [
     "https://pdxplans.org/",
-    "https://rosenhouse-bot-sandbox.github.io/science-viz/",
+    "https://science-viz.rosen.house/",
   ]) {
     assert.match(html, new RegExp(`<li><a href="${url}">`));
   }
