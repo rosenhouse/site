@@ -4,8 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gabe's personal projects</title>
+<style>
+:root { color-scheme: light dark; }
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
+.appearance { float: right; font-family: system-ui, sans-serif; font-size: 0.875rem; }
+.appearance button {
+  font: inherit;
+  color: LinkText;
+  background: none;
+  border: 0;
+  padding: 0.5rem 0.25rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.appearance button[aria-pressed="true"] {
+  color: CanvasText;
+  font-weight: 600;
+  text-decoration: none;
+}
+</style>
+<script src="/appearance.js"></script>
 </head>
 <body>
+<div class="appearance" role="group" aria-label="Appearance">
+<button type="button" data-appearance="light">light</button> ·
+<button type="button" data-appearance="dark">dark</button> ·
+<button type="button" data-appearance="system">system</button>
+</div>
 <h1>Some projects</h1>
 <ul>
 <li><a href="https://pdxplans.org/">pdxplans.org</a></li>
